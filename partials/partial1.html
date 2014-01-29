@@ -1,0 +1,38 @@
+<h1>Trails</h1>
+
+  <div class="row-fluid">
+
+    <div class="span12">
+      <h2>Hiking Trails in the Vancouver Region</h2>
+      <p>Search for a hiking trail near Vancouver.</p>
+    </div>
+
+  </div> <!-- /.row-fluid -->
+
+  <div class="row-fluid">
+
+    <div class="span12">
+    <!--Sidebar content-->
+      <p>Search: <input ng-model="query"></p>
+      <p>Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="elevationGain">Elevation Gain</option>
+        <option value="distance">Distance</option>
+        <option value="highestPeak">Highest Peak</option>
+      </select></p>
+    </div>
+
+    <div class="span10">
+      <!--Main content-->
+      <ul class="mountainTrails">
+        <li ng-repeat="trail in mountainTrails | filter:query | orderBy:orderProp"
+            class="thumbnail trail-listing">
+          <a href="#/mountainTrails/{{trail.id}}" class="thumb"><img ng-src="{{trail.imageUrl}}"></a>
+          <a href="#/mountainTrails/{{trail.id}}">{{trail.name}}</a>
+          <p>{{trail.snippet}}</p>
+        </li>
+      </ul>
+    </div>
+
+  </div> <!-- /.row-fluid -->

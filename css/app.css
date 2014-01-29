@@ -1,0 +1,206 @@
+/* app css stylesheet */
+
+@font-face {
+    font-family: 'misprojectregular';
+    src: url('../fonts/misproject-webfont.eot');
+    src: url('../fonts/misproject-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/misproject-webfont.woff') format('woff'),
+         url('../fonts/misproject-webfont.ttf') format('truetype'),
+         url('../fonts/misproject-webfont.svg#misprojectregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*** Styles For Google Map of Mountains ***/
+
+/*body, html, #map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.stations, .stations svg {
+  position: absolute;
+}
+
+.stations svg {
+  width: 60px;
+  height: 20px;
+  padding-right: 100px;
+  font: 10px sans-serif;
+}
+
+.stations circle {
+  fill: brown;
+  stroke: black;
+  stroke-width: 1.5px;
+}*/
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "misprojectregular", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1, .h1 {
+  font-size: 60px;
+  line-height: 68px;
+}
+
+.view-container {
+  margin: 0 auto;
+}
+
+.menu {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0 0 0.5em;
+}
+
+/*.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}*/
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.track-images {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.mountainTrails {
+  list-style: none;
+}
+
+.thumb {
+  float: left;
+  margin: -1em 1em 1.5em 0em;
+  padding-bottom: 1em;
+  height: 100px;
+  width: 100px;
+}
+
+.mountainTrails li {
+  clear: both;
+  height: 100px;
+  padding-top: 15px;
+}
+
+a:hover img {
+  opacity: 0.7;
+}
+
+img.trail {
+  float: left;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  background-color: white;
+  padding: 2em;
+  height: 400px;
+  width: 400px;
+}
+
+ul.trail-thumbs {
+  margin: 0;
+  list-style: none;
+}
+
+ul.trail-thumbs li {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 1em;
+  background-color: white;
+}
+
+ul.trail-thumbs img {
+  height: 100px;
+  width: 100px;
+  padding: 0;
+}
+
+ul.trail-thumbs img:hover {
+  cursor: pointer;
+}
+
+ul.specs {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.specs > li{
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+ul.specs > li > span{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+ul.specs dt {
+  font-weight: bold;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+/*** D3 Charts Example From http://bl.ocks.org/mbostock/3884955 ***/
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+
+/*** D3 Charts Example From http://bost.ocks.org/mike/chart/ ***/
+
+/*.line {
+  display: none;
+}*/
+
+/*** D3 tutz From http://alignedleft.com/tutorials/d3/the-power-of-data ***/
+
+/*div.bar-graph {
+        display: inline-block;
+        width: 20px;
+        height: 175px;  Gets overriden by D3-assigned height below 
+        margin-right: 2px;
+        background-color: teal;
+      }*/

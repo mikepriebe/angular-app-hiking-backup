@@ -1,0 +1,72 @@
+<div class="row-fluid">
+
+    <div class="span12">
+
+		<h1>{{trail.name}}</h1>
+
+		<p>{{trail.description}}</p>
+
+		<span trails-chart></span>
+
+<script>
+
+// d3.csv("mountainTrails/golden-ears.csv", function(data) {
+//   var formatDate = d3.time.format("%b %Y");
+
+//   d3.select("#example")
+//       .datum(data)
+//     .call(timeSeriesChart()
+//       .x(function(d) { return formatDate.parse(d.date); })
+//       .y(function(d) { return +d.price; }));
+// });
+
+// </script>
+
+
+		<!-- <div class="trail-images">
+		  <img ng-src="{{img}}"
+		       class="trail"
+		       ng-repeat="img in trail.images"
+		       ng-class="{active: mainImageUrl==img}">
+		</div> -->
+
+		<ul class="trail-thumbs">
+		  <li ng-repeat="img in trail.images">
+		    <img ng-src="{{img}}" ng-click="setImage(img)">
+		  </li>
+		</ul>
+
+		<ul class="specs">
+		  <li>
+		    <span>Distance</span>
+		    <dl>
+		      <dt>Distance</dt>
+		      <dd ng-repeat="distance in trail.distance">{{distance}}</dd>
+		    </dl>
+		  </li>
+		  <li>
+		    <span>Elevation Gain</span>
+		    <dl>
+		      <dt>Elevation Gain</dt>
+		      <dd ng-repeat="elevationGain in trail.elevationGain">{{elevationGain}}</dd>
+		    </dl>
+		  </li>
+		  <li>
+		    <span>Highest Point</span>
+		    <dl>
+		      <dt>Highest Point</dt>
+		      <dd ng-repeat="highestPoint in trail.highestPoint">{{highestPoint}}</dd>
+		    </dl>
+		  </li>
+		  <li>
+		    <span>Average Grade</span>
+		    <dl>
+		      <dt>Average Grade</dt>
+		      <dd>{{trail.averageGrade}}</dd>
+		    </dl>
+		  </li>
+		</ul>
+
+    </div>
+
+</div>
